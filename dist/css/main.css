@@ -4,7 +4,13 @@
 body {
   background-color: #e5e5e5;
   margin: 0;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Quicksand", sans-serif; }
+
+.main-content {
+  margin-top: 4.5rem; }
+
+.heading {
+  font-family: "Salsa", cursive; }
 
 header.app-header {
   background-color: #fff;
@@ -13,7 +19,9 @@ header.app-header {
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 0 12px; }
+  padding: 0 12px;
+  top: 0;
+  font-family: "Roboto", sans-serif; }
   header.app-header .app-header__logo {
     width: 10%; }
     header.app-header .app-header__logo img {
@@ -53,6 +61,9 @@ header.app-header {
         padding: 10px 16px;
         background-color: #fff;
         opacity: 1;
+        height: 100vh;
+        padding-top: 20vh;
+        overflow-y: hidden;
         transition: all 0.5s ease-in-out; }
         header.app-header nav.app-header__nav a.nav__link {
           text-align: center;
@@ -76,13 +87,53 @@ header.app-header {
       header.app-header nav.app-header__nav a.nav__link:hover, header.app-header nav.app-header__nav a.nav__link.active {
         color: #fa5a9f; }
 
+.content-jumbotron {
+  text-align: center;
+  background-image: url("../images/header-big.jpg");
+  background-position: center;
+  background-clip: border-box;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  @media (max-width: 600px) {
+    .content-jumbotron {
+      background-image: url("../images/header-small.jpg"); } }
+  .content-jumbotron .jumbotron__overlay {
+    padding: 8rem 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%; }
+    @media (max-width: 600px) {
+      .content-jumbotron .jumbotron__overlay {
+        padding: 3rem 0; } }
+  .content-jumbotron .jumbotron__title {
+    color: #fa5a9f;
+    font-size: 5rem;
+    margin-bottom: 0; }
+    @media (max-width: 600px) {
+      .content-jumbotron .jumbotron__title {
+        font-size: 3rem; } }
+  .content-jumbotron .jumbotron__subtitle {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 3rem; }
+    @media (max-width: 600px) {
+      .content-jumbotron .jumbotron__subtitle {
+        font-size: 1rem; } }
+
 .button-accent,
 a.button-accent {
   padding: 8px 21px !important;
   background-color: #007bff;
   color: #fff !important;
   border-radius: 12px;
-  font-weight: 200; }
+  font-weight: 200;
+  text-decoration: none; }
+  .button-accent.xl,
+  a.button-accent.xl {
+    font-size: 21px;
+    padding: 10px 28px !important; }
 
 .button-accent:hover,
 a.button-accent:hover {

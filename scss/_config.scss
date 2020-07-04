@@ -1,3 +1,4 @@
+// Colors
 $primary-color: #fff;
 $primary-text-color: #333;
 
@@ -7,12 +8,6 @@ $secondary-text-color: #fff;
 $accent-color: #007bff;
 $accent-text-color: #fff;
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #e5e5e5;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
+// Images
+$jumbotron-bg-big: url('../images/header-big.jpg');
+$jumbotron-bg-small: url('../images/header-small.jpg');

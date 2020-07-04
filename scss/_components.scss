@@ -5,6 +5,12 @@ a.button-accent {
   color: $accent-text-color !important;
   border-radius: 12px;
   font-weight: 200;
+  text-decoration: none;
+
+  &.xl {
+    font-size: 21px;
+    padding: 10px 28px !important;
+  }
 }
 
 .button-accent:hover,
