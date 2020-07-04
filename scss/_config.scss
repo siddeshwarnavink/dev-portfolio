@@ -6,3 +6,13 @@ $secondary-text-color: #fff;
 
 $accent-color: #007bff;
 $accent-text-color: #fff;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}

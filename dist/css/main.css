@@ -1,2 +1,44 @@
+* {
+  box-sizing: border-box; }
+
 body {
-  background-color: #e5e5e5; }
+  background-color: #e5e5e5;
+  margin: 0;
+  font-family: "Roboto", sans-serif; }
+
+header.app-header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 12px; }
+  header.app-header .app-header__logo {
+    width: 10%; }
+    header.app-header .app-header__logo img {
+      width: 5rem; }
+  header.app-header .app-header__spacer {
+    flex: 1; }
+  header.app-header nav.app-header__nav {
+    display: inline; }
+    header.app-header nav.app-header__nav a.nav__link {
+      padding: 8px 16px;
+      float: left;
+      width: auto;
+      border: none;
+      outline: 0;
+      font-size: 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #333; }
+      header.app-header nav.app-header__nav a.nav__link.active {
+        color: #fa5a9f; }
+
+.button-accent,
+a.button-accent {
+  padding: 8px 21px !important;
+  background-color: #007bff;
+  color: #fff !important;
+  border-radius: 12px;
+  font-weight: 200; }
