@@ -32,7 +32,9 @@ header.app-header {
       text-decoration: none;
       text-transform: uppercase;
       color: #333; }
-      header.app-header nav.app-header__nav a.nav__link.active {
+      header.app-header nav.app-header__nav a.nav__link:hover {
+        transition: all 0.5s ease-out; }
+      header.app-header nav.app-header__nav a.nav__link:hover, header.app-header nav.app-header__nav a.nav__link.active {
         color: #fa5a9f; }
 
 .button-accent,
@@ -42,3 +44,8 @@ a.button-accent {
   color: #fff !important;
   border-radius: 12px;
   font-weight: 200; }
+
+.button-accent:hover,
+a.button-accent:hover {
+  transition: all 0.5s ease-out;
+  background-color: #006fe6; }

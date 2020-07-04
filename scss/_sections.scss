@@ -33,6 +33,11 @@ header.app-header {
       text-transform: uppercase;
       color: $primary-text-color;
 
+      &:hover {
+        @include easeOut;
+      }
+
+      &:hover,
       &.active {
         color: $secondary-color;
       }

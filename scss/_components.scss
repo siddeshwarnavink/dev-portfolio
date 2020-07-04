@@ -6,3 +6,9 @@ a.button-accent {
   border-radius: 12px;
   font-weight: 200;
 }
+
+.button-accent:hover,
+a.button-accent:hover {
+  @include easeOut;
+  background-color: darken($color: $accent-color, $amount: 5);
+}
