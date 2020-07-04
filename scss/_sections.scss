@@ -66,6 +66,9 @@ header.app-header {
       padding: 10px 16px;
       background-color: $primary-color;
       opacity: 1;
+      height: 100vh;
+      padding-top: 20vh;
+      overflow-y: hidden;
       @include easeInOut;
 
       a.nav__link {
