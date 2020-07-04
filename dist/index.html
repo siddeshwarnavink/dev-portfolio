@@ -6,11 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Sydex</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <h1>Hello world</h1>
+    <header class="app-header">
+        <div class="app-header__logo">
+            <img class="heaer-logo__image" src="images/logo.png" />
+        </div>
+
+        <div class="app-header__spacer"></div>
+
+        <nav class="app-header__nav-button" id="menuIcon">
+            <div class="nav-button__line"></div>
+            <div class="nav-button__line"></div>
+            <div class="nav-button__line"></div>
+        </nav>
+
+        <nav class="app-header__nav close" id="menuLinks">
+            <a class="nav__link active" href="javascript:void(0)">OVERVIEW</a>
+            <a class="nav__link" href="javascript:void(0)">SERVICES</a>
+            <a class="nav__link" href="javascript:void(0)">WORKS</a>
+            <a class="nav__link" href="javascript:void(0)">ABOUT</a>
+            <a class="nav__link button-accent" href="javascript:void(0)">HIRE ME</a>
+        </nav>
+    </header>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
