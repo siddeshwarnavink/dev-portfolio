@@ -19,8 +19,64 @@ header.app-header {
     flex: 1;
   }
 
+  .app-header__nav-button {
+    padding: 10px 12px;
+    margin-top: 2px;
+    @include onDesktop {
+      display: none;
+    }
+
+    @include onMiniDesktop {
+      display: none;
+    }
+
+    .nav-button__line {
+      background-color: $primary-text-color;
+      width: 25px;
+      height: 3px;
+      margin-bottom: 5px;
+      @include easeOut;
+    }
+
+    &.close {
+      .nav-button__line:nth-child(1) {
+        transform: rotate(45deg) translate(12px, 11px);
+      }
+
+      .nav-button__line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-button__line:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   nav.app-header__nav {
     display: inline;
+    @include onMobile {
+      display: block;
+      position: fixed;
+      top: 5rem;
+      left: 0;
+      width: 100%;
+      padding: 10px 16px;
+      background-color: $primary-color;
+      opacity: 1;
+      @include easeInOut;
+
+      a.nav__link {
+        text-align: center;
+        align-items: center;
+        width: 100% !important;
+      }
+
+      &.close {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+    }
 
     a.nav__link {
       padding: 8px 16px;
