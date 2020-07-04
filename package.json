@@ -1,0 +1,23 @@
+{
+  "name": "dev-portfolio",
+  "version": "1.0.0",
+  "description": "A developer portfolio website template",
+  "main": "scss/main.scss",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run serve\" \"npm run watch\"",
+    "serve": "serve dist/",
+    "watch": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [],
+  "author": "Siddeshwar Navinkumar",
+  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/siddeshwarnavink/dev-portfolio",
+    "type": "git"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "node-sass": "^4.14.1",
+    "serve": "^11.3.2"
+  }
+}
