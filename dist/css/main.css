@@ -12,6 +12,9 @@ body {
 .heading {
   font-family: "Salsa", cursive; }
 
+.primary-bg {
+  background-color: #fff; }
+
 header.app-header {
   background-color: #fff;
   position: fixed;
