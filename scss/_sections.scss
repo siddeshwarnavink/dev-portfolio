@@ -295,3 +295,80 @@ $maxRows: 8;
     }
   }
 }
+
+// About Clients
+.about-clients {
+  background-image: $about-customers;
+
+  .about-clients__overlay {
+    padding: 3rem 0;
+    background-color: rgba($color: $primary-color, $alpha: 0.8);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    @include onMobile {
+      padding: 0 10px;
+    }
+
+    .clients__title {
+      font-size: 2rem;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    .clients__subtitle {
+      font-size: 21px;
+    }
+
+    .carousel__slide {
+      margin: auto;
+      max-width: 60%;
+      background-color: $primary-color;
+      padding: 5rem;
+      display: flex;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      @include shadowed;
+
+      @include onMobile {
+        max-width: 100%;
+        display: block;
+      }
+
+      &:not(.current) {
+        display: none;
+      }
+
+      .slide__icon {
+        width: 15%;
+        margin-top: 10px;
+        margin-right: 10px;
+        i.fa {
+          font-size: 6rem;
+          color: $secondary-color;
+        }
+        @include onMobile {
+          width: 100% !important;
+        }
+      }
+
+      .silde__content {
+        width: 80%;
+        text-align: left;
+        .content__message {
+          font-size: 25px;
+        }
+
+        .content__author::before {
+          content: "- ";
+        }
+
+        @include onMobile {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

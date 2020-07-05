@@ -261,6 +261,60 @@ section.app-section {
       .about-section .about-section__about .about__image img {
         width: 100%; } }
 
+.about-clients {
+  background-image: url("../images/customers.jpg"); }
+  .about-clients .about-clients__overlay {
+    padding: 3rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    @media (max-width: 600px) {
+      .about-clients .about-clients__overlay {
+        padding: 0 10px; } }
+    .about-clients .about-clients__overlay .clients__title {
+      font-size: 2rem;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 10px; }
+    .about-clients .about-clients__overlay .clients__subtitle {
+      font-size: 21px; }
+    .about-clients .about-clients__overlay .carousel__slide {
+      margin: auto;
+      max-width: 60%;
+      background-color: #fff;
+      padding: 5rem;
+      display: flex;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+      @media (max-width: 600px) {
+        .about-clients .about-clients__overlay .carousel__slide {
+          max-width: 100%;
+          display: block; } }
+      .about-clients .about-clients__overlay .carousel__slide:not(.current) {
+        display: none; }
+      .about-clients .about-clients__overlay .carousel__slide .slide__icon {
+        width: 15%;
+        margin-top: 10px;
+        margin-right: 10px; }
+        .about-clients .about-clients__overlay .carousel__slide .slide__icon i.fa {
+          font-size: 6rem;
+          color: #fa5a9f; }
+        @media (max-width: 600px) {
+          .about-clients .about-clients__overlay .carousel__slide .slide__icon {
+            width: 100% !important; } }
+      .about-clients .about-clients__overlay .carousel__slide .silde__content {
+        width: 80%;
+        text-align: left; }
+        .about-clients .about-clients__overlay .carousel__slide .silde__content .content__message {
+          font-size: 25px; }
+        .about-clients .about-clients__overlay .carousel__slide .silde__content .content__author::before {
+          content: "- "; }
+        @media (max-width: 600px) {
+          .about-clients .about-clients__overlay .carousel__slide .silde__content {
+            width: 100% !important; } }
+
 .button-accent,
 a.button-accent {
   padding: 8px 21px !important;
