@@ -1,3 +1,6 @@
-body {
-  background-color: #e5e5e5;
-}
+@import "config";
+@import "global";
+@import "animations";
+@import "responsive";
+@import "sections";
+@import "components";

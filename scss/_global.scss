@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba($color: $primary-text-color, $alpha: 0.1);
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  overflow-x: hidden;
+}
+
+.main-content {
+  margin-top: 4.5rem;
+}
+
+.heading {
+  font-family: "Salsa", cursive;
+}
+
+.primary-bg {
+  background-color: $primary-color;
+  color: $primary-text-color;
+}
+
+.secondary-bg {
+  background-color: $secondary-color;
+  color: $secondary-text-color;
+}
+
+@mixin shadowed {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

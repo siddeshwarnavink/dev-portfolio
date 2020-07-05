@@ -1,0 +1,35 @@
+// Helpers
+@mixin anim($name, $duration: 0.5s) {
+  -webkit-animation: $name $duration;
+  animation: $name $duration;
+}
+
+// Animations
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+@mixin easeInOut {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin faded {
+  @include anim(fading);
+}
+
+@-webkit-keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
