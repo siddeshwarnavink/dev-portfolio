@@ -30,10 +30,13 @@ function forEachChildOf(parrentEl, cb) {
 }
 
 // Menu functions
-menuIcon.addEventListener("click", () => {
+function toggleMenu() {
   menuIcon.classList.toggle("close");
   menuLinks.classList.toggle("close");
-});
+}
+
+menuIcon.addEventListener("click", toggleMenu);
+menuLinks.addEventListener("click", toggleMenu);
 
 // Auto-highlite toolbar
 const toolbarHeight = 80;

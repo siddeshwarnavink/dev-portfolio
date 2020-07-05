@@ -162,6 +162,10 @@ header.app-header {
 section.app-section {
   padding: 8rem 1rem;
 
+  @include onMobile {
+    padding: 2rem 1rem;
+  }
+
   .heading {
     text-align: center;
     font-size: 2rem;
@@ -202,6 +206,7 @@ $maxRows: 8;
     background-color: #fff;
     text-align: center;
     border-radius: 10px;
+    padding: 1.5rem;
     @include shadowed;
 
     i.service-item__icon {
@@ -225,10 +230,10 @@ $maxRows: 8;
 
 // Works
 .work-section {
-  padding: 10rem 10rem !important;
+  padding: 5rem 10rem !important;
 
   @include onMobile {
-    padding: 0 10px !important;
+    padding: 5rem 10px !important;
   }
 
   .work-section__works {
@@ -309,7 +314,7 @@ $maxRows: 8;
     text-align: center;
 
     @include onMobile {
-      padding: 0 10px;
+      padding: 3rem 10px;
     }
 
     .clients__title {
@@ -386,8 +391,9 @@ $maxRows: 8;
 
     .carousel__dots {
       display: flex;
-      gap: 12px;
       padding: 1rem 45%;
+      grid-column-gap: 10px !important;
+      grid-row-gap: 10px !important;
       justify-content: space-around;
 
       .dots__dot {
@@ -403,8 +409,7 @@ $maxRows: 8;
 
         @include onMobile {
           width: 18px;
-          height: 18px;
-          margin: 1px;
+          margin-left: 1px;
         }
       }
     }
