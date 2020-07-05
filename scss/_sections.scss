@@ -256,3 +256,42 @@ $maxRows: 8;
     }
   }
 }
+
+// About us
+.about-section {
+  .about-section__about {
+    padding: 3rem 0;
+    .about__bio {
+      .heading {
+        text-align: start !important;
+      }
+      .bio__name {
+        font-size: 3.5rem;
+        padding: 0;
+        padding-bottom: 5px;
+        margin: 0;
+      }
+      .bio__caption {
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0;
+      }
+
+      p.bio__description {
+        padding: 0;
+        font-size: 25px;
+      }
+    }
+
+    .about__image {
+      img {
+        width: 27rem;
+        border-radius: 50%;
+
+        @include onMobile {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

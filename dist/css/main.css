@@ -238,6 +238,29 @@ section.app-section {
       .work-section .work-section__works .works__item:hover {
         transform: translateY(-8px); }
 
+.about-section .about-section__about {
+  padding: 3rem 0; }
+  .about-section .about-section__about .about__bio .heading {
+    text-align: start !important; }
+  .about-section .about-section__about .about__bio .bio__name {
+    font-size: 3.5rem;
+    padding: 0;
+    padding-bottom: 5px;
+    margin: 0; }
+  .about-section .about-section__about .about__bio .bio__caption {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0; }
+  .about-section .about-section__about .about__bio p.bio__description {
+    padding: 0;
+    font-size: 25px; }
+  .about-section .about-section__about .about__image img {
+    width: 27rem;
+    border-radius: 50%; }
+    @media (max-width: 600px) {
+      .about-section .about-section__about .about__image img {
+        width: 100%; } }
+
 .button-accent,
 a.button-accent {
   padding: 8px 21px !important;
