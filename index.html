@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sydex</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Salsa&display=swap&family=Quicksand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="app-header" id="toolbar">
+        <div class="app-header__logo">
+            <img class="heaer-logo__image" src="images/logo.png" />
+        </div>
+
+        <div class="app-header__spacer"></div>
+
+        <nav class="app-header__nav-button" id="menuIcon">
+            <div class="nav-button__line"></div>
+            <div class="nav-button__line"></div>
+            <div class="nav-button__line"></div>
+        </nav>
+
+        <nav class="app-header__nav close" id="menuLinks">
+            <a class="nav__link active" href="#overview">OVERVIEW</a>
+            <a class="nav__link" href="#services">SERVICES</a>
+            <a class="nav__link" href="#works">WORKS</a>
+            <a class="nav__link" href="#about">ABOUT</a>
+            <a class="nav__link button-accent" href="#contact">HIRE ME</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="content-jumbotron" id="overview">
+            <div class="jumbotron__overlay">
+                <h1 class="heading jumbotron__title">Professional websites</h1>
+                <h2 class="jumbotron__subtitle">FOR PROFESSIONAL BUSINESSES</h2>
+
+                <a class="button-accent xl" href="#contact">HIRE ME</a>
+            </div>
+        </section>
+
+        <section class="app-section" id="services">
+            <h1 class="heading">Our services</h1>
+
+            <div class="service app-grid lg-3 sm-1">
+                <div class="service__item">
+                    <i class="fa fa-diamond service-item__icon" aria-hidden="true"></i>
+                    <h1 class="service-item__caption">Best Quality</h1>
+                    <p class="service-item__description">Get the best quality app done</p>
+                </div>
+                <div class="service__item">
+                    <i class="fa fa-money service-item__icon" aria-hidden="true"></i>
+                    <h1 class="service-item__caption">Low cost</h1>
+                    <p class="service-item__description">Get the app in a reasonable cost</p>
+                </div>
+                <div class="service__item">
+                    <i class="fa fa-life-ring service-item__icon" aria-hidden="true"></i>
+                    <h1 class="service-item__caption">Support</h1>
+                    <p class="service-item__description">Get All-time support for yout app</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-section primary-bg work-section" id="works">
+            <h1 class="heading">Some of our works</h1>
+
+            <div class="work-section__works app-grid lg-4 md-2 sm-2">
+                <div class="works__item" style="background-image: url('images/thumbnails/1.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/2.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/3.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/4.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/5.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/6.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/7.jpg');"></div>
+                <div class="works__item" style="background-image: url('images/thumbnails/8.jpg');"></div>
+            </div>
+        </section>
+
+        <section class="app-section about-section" id="about">
+            <h1 class="heading">All about us</h1>
+
+            <div class="about-section__about app-grid lg-2 sm-1">
+                <div class="about__bio">
+                    <h1 class="heading bio__name">Siddeshwar</h1>
+                    <h2 class="heading bio__caption">Full-stack web developer</h2>
+                    <p class="bio__description">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
+                    </p>
+                </div>
+
+                <div class="about__image">
+                    <img src="images/myself.jpg" alt="Siddehwar" />
+                </div>
+            </div>
+        </section>
+
+        <section class="about-clients primary-bg">
+            <div class="about-clients__overlay">
+                <h1 class="heading clients__title">Our customers</h1>
+                <sub class="clients__subtitle">A word from our happy customers!</sub>
+
+                <div class="message-carousel" id="carouselContainer">
+                    <div class="carousel__slide current">
+                        <div class="slide__icon">
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="silde__content">
+                            <p class="content__message">
+                                He has made everything possible. Thank you for yout excellent serveice.
+                            </p>
+                            <i class="content__author">John Doe, CEO of Abc.inc</i>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <div class="slide__icon">
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="silde__content">
+                            <p class="content__message">
+                                He has made everything possible. Thank you for yout excellent serveice.
+                            </p>
+                            <i class="content__author">John Doe, CEO of Abc.inc</i>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <div class="slide__icon">
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="silde__content">
+                            <p class="content__message">
+                                He has made everything possible. Thank you for yout excellent serveice.
+                            </p>
+                            <i class="content__author">John Doe, CEO of Abc.inc</i>
+                        </div>
+                    </div>
+
+                    <div class="carousel__dots" id="dotsContainer">
+                        <div class="dots__dot active"></div>
+                        <div class="dots__dot"></div>
+                        <div class="dots__dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-section secondary-bg contact-section" id="contact">
+            <h1 class="heading">Stay in touch!</h1>
+
+            <form action="" method="post" class="app-form">
+                <span class="form__label">Send me a message</span>
+                <div class="form__control app-grid lg-2 sm-1">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="E-mail address">
+                </div>
+                <div class="form__control">
+                    <input type="text" placeholder="Subject">
+
+                </div>
+                <div class="form__control">
+                    <textarea name="" placeholder="Message" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form__control">
+                    <button class="button-accent xl">SEND MESSAGE</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="app-footer">
+        <h4 class="heading">&copy; Sydex.inc 2020</h4>
+
+        <div class="footer__media">
+            <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
