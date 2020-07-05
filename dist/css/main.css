@@ -1,8 +1,11 @@
 * {
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
-  background-color: #e5e5e5;
+  background-color: rgba(51, 51, 51, 0.1);
   margin: 0;
   font-family: "Quicksand", sans-serif;
   overflow-x: hidden; }
@@ -42,7 +45,10 @@ header.app-header {
   align-items: center;
   padding: 0 12px;
   top: 0;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  z-index: 5; }
+  header.app-header.highlight {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
   header.app-header .app-header__logo {
     width: 10%; }
     header.app-header .app-header__logo img {
@@ -145,7 +151,10 @@ header.app-header {
         font-size: 1rem; } }
 
 section.app-section {
-  padding: 3rem 1rem; }
+  padding: 8rem 1rem; }
+  @media (max-width: 600px) {
+    section.app-section {
+      padding: 2rem 1rem; } }
   section.app-section .heading {
     text-align: center;
     font-size: 2rem; }
@@ -216,6 +225,7 @@ section.app-section {
     background-color: #fff;
     text-align: center;
     border-radius: 10px;
+    padding: 1.5rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
     .service .service__item i.service-item__icon {
       font-size: 10rem;
@@ -230,10 +240,10 @@ section.app-section {
       padding: 0; }
 
 .work-section {
-  padding: 3rem 10rem !important; }
+  padding: 5rem 10rem !important; }
   @media (max-width: 600px) {
     .work-section {
-      padding: 0 10px !important; } }
+      padding: 5rem 10px !important; } }
   .work-section .work-section__works {
     grid-column-gap: 50px !important;
     grid-row-gap: 2.5rem !important; }
@@ -287,7 +297,7 @@ section.app-section {
     text-align: center; }
     @media (max-width: 600px) {
       .about-clients .about-clients__overlay {
-        padding: 0 10px; } }
+        padding: 3rem 10px; } }
     .about-clients .about-clients__overlay .clients__title {
       font-size: 2rem;
       padding: 0;
@@ -340,8 +350,9 @@ section.app-section {
             width: 100% !important; } }
     .about-clients .about-clients__overlay .carousel__dots {
       display: flex;
-      gap: 12px;
       padding: 1rem 45%;
+      grid-column-gap: 10px !important;
+      grid-row-gap: 10px !important;
       justify-content: space-around; }
       .about-clients .about-clients__overlay .carousel__dots .dots__dot {
         width: 12px;
@@ -354,8 +365,7 @@ section.app-section {
         @media (max-width: 600px) {
           .about-clients .about-clients__overlay .carousel__dots .dots__dot {
             width: 18px;
-            height: 18px;
-            margin: 1px; } }
+            margin-left: 1px; } }
 
 .contact-section form {
   margin: auto;
@@ -364,6 +374,7 @@ section.app-section {
 footer.app-footer {
   text-align: center;
   background-color: #fff;
+  color: #333;
   padding: 12px;
   padding-bottom: 21px; }
   footer.app-footer .heading {
@@ -411,7 +422,8 @@ a.button-accent:hover {
   padding: 10px 0;
   text-align: center; }
   .app-form .form__control.app-grid {
-    grid-column-gap: 10px !important; }
+    grid-column-gap: 10px !important;
+    grid-row-gap: 10px !important; }
   .app-form .form__control input,
   .app-form .form__control textarea {
     padding: 10px 12px;

@@ -9,6 +9,10 @@ header.app-header {
   padding: 0 12px;
   top: 0;
   font-family: "Roboto", sans-serif;
+  z-index: 5;
+  &.highlight {
+    @include shadowed;
+  }
 
   .app-header__logo {
     width: 10%;
@@ -156,7 +160,11 @@ header.app-header {
 
 // Section
 section.app-section {
-  padding: 3rem 1rem;
+  padding: 8rem 1rem;
+
+  @include onMobile {
+    padding: 2rem 1rem;
+  }
 
   .heading {
     text-align: center;
@@ -198,6 +206,7 @@ $maxRows: 8;
     background-color: #fff;
     text-align: center;
     border-radius: 10px;
+    padding: 1.5rem;
     @include shadowed;
 
     i.service-item__icon {
@@ -221,10 +230,10 @@ $maxRows: 8;
 
 // Works
 .work-section {
-  padding: 3rem 10rem !important;
+  padding: 5rem 10rem !important;
 
   @include onMobile {
-    padding: 0 10px !important;
+    padding: 5rem 10px !important;
   }
 
   .work-section__works {
@@ -305,7 +314,7 @@ $maxRows: 8;
     text-align: center;
 
     @include onMobile {
-      padding: 0 10px;
+      padding: 3rem 10px;
     }
 
     .clients__title {
@@ -382,8 +391,9 @@ $maxRows: 8;
 
     .carousel__dots {
       display: flex;
-      gap: 12px;
       padding: 1rem 45%;
+      grid-column-gap: 10px !important;
+      grid-row-gap: 10px !important;
       justify-content: space-around;
 
       .dots__dot {
@@ -399,8 +409,7 @@ $maxRows: 8;
 
         @include onMobile {
           width: 18px;
-          height: 18px;
-          margin: 1px;
+          margin-left: 1px;
         }
       }
     }
@@ -419,8 +428,10 @@ $maxRows: 8;
 footer.app-footer {
   text-align: center;
   background-color: $primary-color;
+  color: $primary-text-color;
   padding: 12px;
   padding-bottom: 21px;
+
 
   .heading {
     font-size: 25px;
@@ -435,8 +446,8 @@ footer.app-footer {
       font-size: 21px;
       border-color: transparent;
       border-radius: 100%;
-      display:inline-block;
-      line-height:100%;
+      display: inline-block;
+      line-height: 100%;
       margin-left: 5px;
 
       &:hover {

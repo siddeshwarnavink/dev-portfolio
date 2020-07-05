@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header class="app-header">
+    <header class="app-header" id="toolbar">
         <div class="app-header__logo">
             <img class="heaer-logo__image" src="images/logo.png" />
         </div>
@@ -30,25 +30,25 @@
         </nav>
 
         <nav class="app-header__nav close" id="menuLinks">
-            <a class="nav__link active" href="javascript:void(0)">OVERVIEW</a>
-            <a class="nav__link" href="javascript:void(0)">SERVICES</a>
-            <a class="nav__link" href="javascript:void(0)">WORKS</a>
-            <a class="nav__link" href="javascript:void(0)">ABOUT</a>
-            <a class="nav__link button-accent" href="javascript:void(0)">HIRE ME</a>
+            <a class="nav__link active" href="#overview">OVERVIEW</a>
+            <a class="nav__link" href="#services">SERVICES</a>
+            <a class="nav__link" href="#works">WORKS</a>
+            <a class="nav__link" href="#about">ABOUT</a>
+            <a class="nav__link button-accent" href="#contact">HIRE ME</a>
         </nav>
     </header>
 
     <main class="main-content">
-        <section class="content-jumbotron">
+        <section class="content-jumbotron" id="overview">
             <div class="jumbotron__overlay">
                 <h1 class="heading jumbotron__title">Professional websites</h1>
                 <h2 class="jumbotron__subtitle">FOR PROFESSIONAL BUSINESSES</h2>
 
-                <a class="button-accent xl" href="javascript:void(0)">HIRE ME</a>
+                <a class="button-accent xl" href="#contact">HIRE ME</a>
             </div>
         </section>
 
-        <section class="app-section">
+        <section class="app-section" id="services">
             <h1 class="heading">Our services</h1>
 
             <div class="service app-grid lg-3 sm-1">
@@ -70,7 +70,7 @@
             </div>
         </section>
 
-        <section class="app-section primary-bg work-section">
+        <section class="app-section primary-bg work-section" id="works">
             <h1 class="heading">Some of our works</h1>
 
             <div class="work-section__works app-grid lg-4 md-2 sm-2">
@@ -85,7 +85,7 @@
             </div>
         </section>
 
-        <section class="app-section about-section">
+        <section class="app-section about-section" id="about">
             <h1 class="heading">All about us</h1>
 
             <div class="about-section__about app-grid lg-2 sm-1">
@@ -161,7 +161,7 @@
             </div>
         </section>
 
-        <section class="app-section secondary-bg contact-section">
+        <section class="app-section secondary-bg contact-section" id="contact">
             <h1 class="heading">Stay in touch!</h1>
 
             <form action="" method="post" class="app-form">
@@ -179,7 +179,7 @@
                 </div>
 
                 <div class="form__control">
-                    <button class="button-accent">SEND MESSAGE</button>
+                    <button class="button-accent xl">SEND MESSAGE</button>
                 </div>
             </form>
         </section>
