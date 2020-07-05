@@ -236,7 +236,7 @@ section.app-section {
       padding: 0; }
 
 .work-section {
-  padding: 3rem 10rem !important; }
+  padding: 10rem 10rem !important; }
   @media (max-width: 600px) {
     .work-section {
       padding: 0 10px !important; } }

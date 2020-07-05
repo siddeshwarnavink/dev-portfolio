@@ -2,8 +2,17 @@
 const menuIcon = document.getElementById("menuIcon");
 const menuLinks = document.getElementById("menuLinks");
 
-// Auto-highlite toolbar DOM
+// Auto-highlite toolbar DOM elements
 const toolbar = document.getElementById("toolbar");
+
+// Auto Nav-link active DOM elements
+const sections = [
+  document.getElementById("overview"),
+  document.getElementById("services"),
+  document.getElementById("works"),
+  document.getElementById("about"),
+  document.getElementById("contact"),
+];
 
 // Carousel DOM elements
 const dotsContaner = document.getElementById("dotsContainer");
@@ -12,6 +21,12 @@ const carouselContainer = document.getElementById("carouselContainer");
 // Helper functions
 function ch(el, index) {
   return el.children.item(index);
+}
+
+function forEachChildOf(parrentEl, cb) {
+  for (let i = 0; i < Array(parrentEl.children.length).length; i++) {
+    cb(i);
+  }
 }
 
 // Menu functions
@@ -31,7 +46,7 @@ function sethighliteMode(isHighlighted) {
   }
 }
 
-document.addEventListener("scroll", () => {
+function toolbarHighliteHandler() {
   const pxFromTop = window.scrollY || window.pageYOffset;
 
   if (pxFromTop > toolbarHeight) {
@@ -39,7 +54,7 @@ document.addEventListener("scroll", () => {
   } else {
     sethighliteMode(false);
   }
-});
+}
 
 // Carousel functions
 let currentPage = 0;
@@ -51,12 +66,6 @@ setInterval(() => {
     pushSlide(currentPage + 1);
   }
 }, 3500);
-
-function forEachChildOf(parrentEl, cb) {
-  for (let i = 0; i < Array(parrentEl.children.length).length; i++) {
-    cb(i);
-  }
-}
 
 function pushSlide(index) {
   currentPage = index;
@@ -76,4 +85,33 @@ forEachChildOf(dotsContaner, (index) => {
   ch(dotsContaner, index).addEventListener("click", () => {
     pushSlide(index);
   });
+});
+
+// Auto-menu active link
+const currentUrl = window.location.href;
+const hashValue = currentUrl.split("#")[1];
+
+if (hashValue) {
+  setActiveLink(hashValue);
+}
+
+function autoMenuLinkActiveHandler() {
+  sections.forEach((sectionEl, index) => {
+    const position = sectionEl.getBoundingClientRect();
+    if (position.top >= 0 && position.bottom <= window.innerHeight) {
+      setActiveLink(index);
+    }
+  });
+}
+
+function setActiveLink(index) {
+  forEachChildOf(menuLinks, (i) => {
+    ch(menuLinks, i).classList.remove("active");
+  });
+  ch(menuLinks, index).classList.add("active");
+}
+
+window.addEventListener("scroll", () => {
+  toolbarHighliteHandler();
+  autoMenuLinkActiveHandler();
 });
