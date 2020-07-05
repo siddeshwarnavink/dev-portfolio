@@ -6,6 +6,7 @@ body {
   background-color: #e5e5e5;
   margin: 0;
   font-family: "Quicksand", sans-serif;
+  overflow-x: hidden;
 }
 
 .main-content {
@@ -14,4 +15,12 @@ body {
 
 .heading {
   font-family: "Salsa", cursive;
+}
+
+.primary-bg {
+  background-color: $primary-color;
+}
+
+@mixin shadowed {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
