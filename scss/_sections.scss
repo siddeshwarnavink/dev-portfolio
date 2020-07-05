@@ -9,6 +9,10 @@ header.app-header {
   padding: 0 12px;
   top: 0;
   font-family: "Roboto", sans-serif;
+  z-index: 5;
+  &.highlight {
+    @include shadowed;
+  }
 
   .app-header__logo {
     width: 10%;
@@ -435,8 +439,8 @@ footer.app-footer {
       font-size: 21px;
       border-color: transparent;
       border-radius: 100%;
-      display:inline-block;
-      line-height:100%;
+      display: inline-block;
+      line-height: 100%;
       margin-left: 5px;
 
       &:hover {

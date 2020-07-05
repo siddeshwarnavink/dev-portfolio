@@ -2,6 +2,9 @@
 const menuIcon = document.getElementById("menuIcon");
 const menuLinks = document.getElementById("menuLinks");
 
+// Auto-highlite toolbar DOM
+const toolbar = document.getElementById("toolbar");
+
 // Carousel DOM elements
 const dotsContaner = document.getElementById("dotsContainer");
 const carouselContainer = document.getElementById("carouselContainer");
@@ -15,6 +18,27 @@ function ch(el, index) {
 menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("close");
   menuLinks.classList.toggle("close");
+});
+
+// Auto-highlite toolbar
+const toolbarHeight = 80;
+
+function sethighliteMode(isHighlighted) {
+  if (isHighlighted) {
+    toolbar.classList.add("highlight");
+  } else {
+    toolbar.classList.remove("highlight");
+  }
+}
+
+document.addEventListener("scroll", () => {
+  const pxFromTop = window.scrollY || window.pageYOffset;
+
+  if (pxFromTop > toolbarHeight) {
+    sethighliteMode(true);
+  } else {
+    sethighliteMode(false);
+  }
 });
 
 // Carousel functions
