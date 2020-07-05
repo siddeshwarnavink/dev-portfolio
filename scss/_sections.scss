@@ -185,3 +185,33 @@ $maxRows: 8;
     padding: 20px;
   }
 }
+
+// Services
+.service {
+  grid-column-gap: 50px !important;
+  grid-row-gap: 2.5rem !important;
+
+  .service__item {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    i.service-item__icon {
+      font-size: 10rem;
+      color: $secondary-color;
+    }
+
+    .service-item__caption {
+      padding: 0;
+      margin: 0;
+      color: $secondary-color;
+      font-size: 2rem;
+    }
+
+    .service-item__description {
+      font-size: 21px;
+      padding: 0;
+    }
+  }
+}
