@@ -80,6 +80,7 @@ header.app-header {
       &.close {
         opacity: 0;
         transform: translateY(-10px);
+        display: none;
       }
     }
 
@@ -252,6 +253,159 @@ $maxRows: 8;
 
       &:hover {
         transform: translateY(-8px);
+      }
+    }
+  }
+}
+
+// About us
+.about-section {
+  .about-section__about {
+    padding: 3rem 0;
+    .about__bio {
+      .heading {
+        text-align: start !important;
+      }
+      .bio__name {
+        font-size: 3.5rem;
+        padding: 0;
+        padding-bottom: 5px;
+        margin: 0;
+      }
+      .bio__caption {
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0;
+      }
+
+      p.bio__description {
+        padding: 0;
+        font-size: 25px;
+      }
+    }
+
+    .about__image {
+      img {
+        width: 27rem;
+        border-radius: 50%;
+
+        @include onMobile {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// About Clients
+.about-clients {
+  background-image: $about-customers;
+
+  .about-clients__overlay {
+    padding: 3rem 0;
+    background-color: rgba($color: $primary-color, $alpha: 0.8);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    @include onMobile {
+      padding: 0 10px;
+    }
+
+    .clients__title {
+      font-size: 2rem;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    .clients__subtitle {
+      font-size: 21px;
+    }
+
+    .message-carousel {
+      margin: auto;
+      max-width: 60%;
+
+      @include onMobile {
+        max-width: unset;
+      }
+    }
+
+    .carousel__slide {
+      background-color: $primary-color;
+      padding: 5rem;
+      display: flex;
+      border-radius: 1rem;
+      margin-top: 1rem;
+      @include shadowed;
+      @include easeInOut;
+
+      @include onMobile {
+        max-width: 100%;
+        display: block;
+      }
+
+      &:not(.current) {
+        display: none;
+      }
+
+      &.current {
+        @include faded;
+      }
+
+      .slide__icon {
+        width: 15%;
+        margin-top: 10px;
+        margin-right: 10px;
+        i.fa {
+          font-size: 6rem;
+          color: $secondary-color;
+        }
+        @include onMobile {
+          width: 100% !important;
+        }
+      }
+
+      .silde__content {
+        width: 80%;
+        text-align: left;
+        .content__message {
+          font-size: 25px;
+        }
+
+        .content__author::before {
+          content: "- ";
+        }
+
+        @include onMobile {
+          width: 100% !important;
+        }
+      }
+    }
+
+    .carousel__dots {
+      display: flex;
+      gap: 12px;
+      padding: 1rem 45%;
+      justify-content: space-around;
+
+      .dots__dot {
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        background-color: #000;
+        border-radius: 50%;
+
+        &:not(.active) {
+          background-color: #808080;
+        }
+
+        @include onMobile {
+          width: 18px;
+          height: 18px;
+          margin: 1px;
+        }
       }
     }
   }

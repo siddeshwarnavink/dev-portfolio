@@ -1,7 +1,55 @@
+// Menu DOM elements
 const menuIcon = document.getElementById("menuIcon");
 const menuLinks = document.getElementById("menuLinks");
 
-menuIcon.addEventListener("click", function () {
+// Carousel DOM elements
+const dotsContaner = document.getElementById("dotsContainer");
+const carouselContainer = document.getElementById("carouselContainer");
+
+// Helper functions
+function ch(el, index) {
+  return el.children.item(index);
+}
+
+// Menu functions
+menuIcon.addEventListener("click", () => {
   menuIcon.classList.toggle("close");
   menuLinks.classList.toggle("close");
+});
+
+// Carousel functions
+let currentPage = 0;
+
+setInterval(() => {
+  if (currentPage == carouselContainer.children.length - 2) {
+    pushSlide(0);
+  } else {
+    pushSlide(currentPage + 1);
+  }
+}, 3500);
+
+function forEachChildOf(parrentEl, cb) {
+  for (let i = 0; i < Array(parrentEl.children.length).length; i++) {
+    cb(i);
+  }
+}
+
+function pushSlide(index) {
+  currentPage = index;
+
+  forEachChildOf(carouselContainer, (index) => {
+    ch(carouselContainer, index).classList.remove("current");
+  });
+  forEachChildOf(dotsContaner, (index) => {
+    ch(dotsContaner, index).classList.remove("active");
+  });
+
+  ch(dotsContaner, index).classList.toggle("active");
+  ch(carouselContainer, index).classList.toggle("current");
+}
+
+forEachChildOf(dotsContaner, (index) => {
+  ch(dotsContaner, index).addEventListener("click", () => {
+    pushSlide(index);
+  });
 });
