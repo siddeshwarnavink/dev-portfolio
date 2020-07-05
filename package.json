@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "A developer portfolio website template",
   "main": "scss/main.scss",
+  "homepage": "https://siddeshwarnavink.github.io/dev-portfolio/",
   "scripts": {
     "start": "concurrently --kill-others \"npm run serve\" \"npm run watch\"",
     "serve": "serve dist/",
-    "watch": "node-sass -w scss/ -o dist/css/ --recursive"
+    "watch": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Siddeshwar Navinkumar",
@@ -19,5 +21,8 @@
     "concurrently": "^5.2.0",
     "node-sass": "^4.14.1",
     "serve": "^11.3.2"
+  },
+  "dependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
