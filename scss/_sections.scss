@@ -80,6 +80,7 @@ header.app-header {
       &.close {
         opacity: 0;
         transform: translateY(-10px);
+        display: none;
       }
     }
 
@@ -325,6 +326,10 @@ $maxRows: 8;
     .message-carousel {
       margin: auto;
       max-width: 60%;
+
+      @include onMobile {
+        max-width: unset;
+      }
     }
 
     .carousel__slide {
@@ -334,6 +339,7 @@ $maxRows: 8;
       border-radius: 1rem;
       margin-top: 1rem;
       @include shadowed;
+      @include easeInOut;
 
       @include onMobile {
         max-width: 100%;
@@ -342,6 +348,10 @@ $maxRows: 8;
 
       &:not(.current) {
         display: none;
+      }
+
+      &.current {
+        @include faded;
       }
 
       .slide__icon {
@@ -376,17 +386,25 @@ $maxRows: 8;
 
     .carousel__dots {
       display: flex;
+      gap: 12px;
       padding: 1rem 45%;
       justify-content: space-around;
 
       .dots__dot {
         width: 12px;
         height: 12px;
+        cursor: pointer;
         background-color: #000;
         border-radius: 50%;
 
         &:not(.active) {
           background-color: #808080;
+        }
+
+        @include onMobile {
+          width: 18px;
+          height: 18px;
+          margin: 1px;
         }
       }
     }
