@@ -1,3 +1,4 @@
+// Button
 .button-accent,
 a.button-accent {
   padding: 8px 21px !important;
@@ -6,6 +7,9 @@ a.button-accent {
   border-radius: 12px;
   font-weight: 200;
   text-decoration: none;
+  border-color: transparent;
+  cursor: pointer;
+  outline: none;
 
   &.xl {
     font-size: 21px;
@@ -17,4 +21,36 @@ a.button-accent {
 a.button-accent:hover {
   @include easeOut;
   background-color: darken($color: $accent-color, $amount: 5);
+}
+
+// Form
+.app-form {
+  .form__label {
+    font-size: 21px;
+    font-weight: bold;
+  }
+
+  .form__control {
+    padding: 10px 0;
+    text-align: center;
+
+    &.app-grid {
+      grid-column-gap: 10px !important;
+    }
+
+    input,
+    textarea {
+      padding: 10px 12px;
+      font-size: 18px;
+      width: 100%;
+      outline: none;
+      border-radius: 10px;
+      border-color: transparent;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: $primary-text-color;
+    }
+  }
 }

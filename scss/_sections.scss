@@ -187,10 +187,6 @@ $maxRows: 8;
       }
     }
   }
-
-  * {
-    padding: 20px;
-  }
 }
 
 // Services
@@ -406,6 +402,45 @@ $maxRows: 8;
           height: 18px;
           margin: 1px;
         }
+      }
+    }
+  }
+}
+
+// Contact Section
+.contact-section {
+  form {
+    margin: auto;
+    max-width: 50rem;
+  }
+}
+
+// Footer
+footer.app-footer {
+  text-align: center;
+  background-color: $primary-color;
+  padding: 12px;
+  padding-bottom: 21px;
+
+  .heading {
+    font-size: 25px;
+  }
+
+  .footer__media {
+    a {
+      background-color: rgba($color: $primary-text-color, $alpha: 0.7);
+      color: $primary-color;
+      text-decoration: none;
+      padding: 12px 15px;
+      font-size: 21px;
+      border-color: transparent;
+      border-radius: 100%;
+      display:inline-block;
+      line-height:100%;
+      margin-left: 5px;
+
+      &:hover {
+        background-color: rgba($color: $primary-text-color, $alpha: 0.5);
       }
     }
   }
