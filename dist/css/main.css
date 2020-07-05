@@ -5,7 +5,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background-color: #e5e5e5;
+  background-color: rgba(51, 51, 51, 0.1);
   margin: 0;
   font-family: "Quicksand", sans-serif;
   overflow-x: hidden; }
@@ -374,6 +374,7 @@ section.app-section {
 footer.app-footer {
   text-align: center;
   background-color: #fff;
+  color: #333;
   padding: 12px;
   padding-bottom: 21px; }
   footer.app-footer .heading {

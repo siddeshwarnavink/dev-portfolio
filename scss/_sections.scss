@@ -428,8 +428,10 @@ $maxRows: 8;
 footer.app-footer {
   text-align: center;
   background-color: $primary-color;
+  color: $primary-text-color;
   padding: 12px;
   padding-bottom: 21px;
+
 
   .heading {
     font-size: 25px;
