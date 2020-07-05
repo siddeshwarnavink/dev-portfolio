@@ -14,7 +14,12 @@ body {
   font-family: "Salsa", cursive; }
 
 .primary-bg {
-  background-color: #fff; }
+  background-color: #fff;
+  color: #333; }
+
+.secondary-bg {
+  background-color: #fa5a9f;
+  color: #fff; }
 
 @-webkit-keyframes fading {
   0% {
@@ -203,8 +208,6 @@ section.app-section {
   @media (max-width: 600px) {
     .app-grid.sm-7 {
       grid-template-columns: repeat(7, auto) !important; } }
-  .app-grid * {
-    padding: 20px; }
 
 .service {
   grid-column-gap: 50px !important;
@@ -354,6 +357,10 @@ section.app-section {
             height: 18px;
             margin: 1px; } }
 
+.contact-section form {
+  margin: auto;
+  max-width: 50rem; }
+
 .button-accent,
 a.button-accent {
   padding: 8px 21px !important;
@@ -361,7 +368,10 @@ a.button-accent {
   color: #fff !important;
   border-radius: 12px;
   font-weight: 200;
-  text-decoration: none; }
+  text-decoration: none;
+  border-color: transparent;
+  cursor: pointer;
+  outline: none; }
   .button-accent.xl,
   a.button-accent.xl {
     font-size: 21px;
@@ -371,3 +381,24 @@ a.button-accent {
 a.button-accent:hover {
   transition: all 0.5s ease-out;
   background-color: #006fe6; }
+
+.app-form .form__label {
+  font-size: 21px;
+  font-weight: bold; }
+
+.app-form .form__control {
+  padding: 10px 0;
+  text-align: center; }
+  .app-form .form__control.app-grid {
+    grid-column-gap: 10px !important; }
+  .app-form .form__control input,
+  .app-form .form__control textarea {
+    padding: 10px 12px;
+    font-size: 18px;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    border-color: transparent; }
+  .app-form .form__control input:focus,
+  .app-form .form__control textarea:focus {
+    border-color: #333; }

@@ -187,10 +187,6 @@ $maxRows: 8;
       }
     }
   }
-
-  * {
-    padding: 20px;
-  }
 }
 
 // Services
@@ -408,5 +404,13 @@ $maxRows: 8;
         }
       }
     }
+  }
+}
+
+// Contact Section
+.contact-section {
+  form {
+    margin: auto;
+    max-width: 50rem;
   }
 }

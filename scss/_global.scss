@@ -19,6 +19,12 @@ body {
 
 .primary-bg {
   background-color: $primary-color;
+  color: $primary-text-color;
+}
+
+.secondary-bg {
+  background-color: $secondary-color;
+  color: $secondary-text-color;
 }
 
 @mixin shadowed {
