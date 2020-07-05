@@ -322,9 +322,12 @@ $maxRows: 8;
       font-size: 21px;
     }
 
-    .carousel__slide {
+    .message-carousel {
       margin: auto;
       max-width: 60%;
+    }
+
+    .carousel__slide {
       background-color: $primary-color;
       padding: 5rem;
       display: flex;
@@ -367,6 +370,23 @@ $maxRows: 8;
 
         @include onMobile {
           width: 100% !important;
+        }
+      }
+    }
+
+    .carousel__dots {
+      display: flex;
+      padding: 1rem 45%;
+      justify-content: space-around;
+
+      .dots__dot {
+        width: 12px;
+        height: 12px;
+        background-color: #000;
+        border-radius: 50%;
+
+        &:not(.active) {
+          background-color: #808080;
         }
       }
     }

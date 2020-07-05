@@ -279,9 +279,10 @@ section.app-section {
       padding-bottom: 10px; }
     .about-clients .about-clients__overlay .clients__subtitle {
       font-size: 21px; }
-    .about-clients .about-clients__overlay .carousel__slide {
+    .about-clients .about-clients__overlay .message-carousel {
       margin: auto;
-      max-width: 60%;
+      max-width: 60%; }
+    .about-clients .about-clients__overlay .carousel__slide {
       background-color: #fff;
       padding: 5rem;
       display: flex;
@@ -314,6 +315,17 @@ section.app-section {
         @media (max-width: 600px) {
           .about-clients .about-clients__overlay .carousel__slide .silde__content {
             width: 100% !important; } }
+    .about-clients .about-clients__overlay .carousel__dots {
+      display: flex;
+      padding: 1rem 45%;
+      justify-content: space-around; }
+      .about-clients .about-clients__overlay .carousel__dots .dots__dot {
+        width: 12px;
+        height: 12px;
+        background-color: #000;
+        border-radius: 50%; }
+        .about-clients .about-clients__overlay .carousel__dots .dots__dot:not(.active) {
+          background-color: #808080; }
 
 .button-accent,
 a.button-accent {
