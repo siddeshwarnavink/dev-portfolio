@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   background-color: #e5e5e5;
   margin: 0;
@@ -148,7 +151,7 @@ header.app-header {
         font-size: 1rem; } }
 
 section.app-section {
-  padding: 3rem 1rem; }
+  padding: 8rem 1rem; }
   section.app-section .heading {
     text-align: center;
     font-size: 2rem; }
