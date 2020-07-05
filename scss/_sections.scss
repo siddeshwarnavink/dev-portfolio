@@ -152,3 +152,36 @@ header.app-header {
     }
   }
 }
+
+// Section
+section.app-section {
+  padding: 3rem 1rem;
+
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+// Grid System
+$maxRows: 8;
+
+.app-grid {
+  display: grid;
+
+  @for $i from 1 to $maxRows {
+    &.lg-#{$i} {
+      grid-template-columns: repeat($i, auto);
+    }
+
+    &.sm-#{$i} {
+      @include onMobile {
+        grid-template-columns: repeat($i, auto) !important;
+      }
+    }
+  }
+
+  * {
+    padding: 20px;
+  }
+}
